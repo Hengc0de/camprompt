@@ -31,14 +31,6 @@ const Feed = () => {
     };
     fetchPost();
   }, []);
-  useEffect(() => {
-    const fetchPost = async () => {
-      const response = await fetch(`/api/prompt/tag?=${searchText}`);
-      const data = await response.json();
-      setPost(data);
-    };
-    fetchPost();
-  }, [searchText]);
 
   return (
     <section className="feed">
